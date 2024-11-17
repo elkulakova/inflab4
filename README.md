@@ -20,6 +20,16 @@ docker run -it aafire /usr/bin/aafire
  <img width="600px" src="in process.png" alt="qr"/>
 </p>
 
+Далее добавляем в файл Dockerfile установку утилиты:
+```
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y libaa-bin iputils-ping
+```
+и создаем новый образ `affire-ping`
+```
+docker build -t affire-ping .
+```
+
 Далее можем подключиться запустить контейнер и  подключиться к нему напрямую командой
 ```
 docker run -it cowsay
