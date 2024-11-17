@@ -13,7 +13,11 @@ docker build -t aafire .
 ```
 docker run aafire
 ```
-Наслаждаемся результатом.  
+Результат работы:
+
+<p align="center">
+ <img width="600px" src="in process.png" alt="qr"/>
+</p>
 
 Далее можем подключиться запустить контейнер и  подключиться к нему напрямую командой
 ```
