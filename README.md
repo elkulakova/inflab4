@@ -33,7 +33,18 @@ docker build -t affire-ping .
 ```
 docker run -it aafire-ping /usr/bin/aafire
 ```
-Далее можем подключиться запустить контейнер и  подключиться к нему напрямую командой
+На основе образа `aafire-ping` создаем контейнеры с именами `cont1` и `cont2`:
+```
+docker run -it --name cont1 aafire-ping /usr/bin/aafire
+```
+```
+docker run -it --name cont2 aafire-ping /usr/bin/aafire
+```
+С помощью команды `docker ps` убеждаемся, что оба контейнера запущены:
+<p align="center">
+ <img width="600px" src="conts in p.png" alt="qr"/>
+</p>
+
 ```
 docker run -it cowsay
 ```
