@@ -29,7 +29,10 @@ RUN apt-get update && apt-get install -y libaa-bin iputils-ping
 ```
 docker build -t affire-ping .
 ```
-
+Далее запускаем контейнер на основе созданного образа. При создании контейнера передаём ему запуск приложения “aafire”.
+```
+docker run -it aafire-ping /usr/bin/aafire
+```
 Далее можем подключиться запустить контейнер и  подключиться к нему напрямую командой
 ```
 docker run -it cowsay
