@@ -8,11 +8,11 @@ RUN apt-get update && apt-get install -y libaa-bin
 ```
 В терминале в папке с этим файлом запускаем команду сборки образа с тегом “aafire”.
 ```
-docker build -t aafire .
+sudo docker build -t aafire .
 ```
 Далее запускаем контейнер на основе созданного образа. При создании контейнера передаём ему запуск приложения “aafire”.
 ```
-docker run -it aafire /usr/bin/aafire
+sudo docker run -it aafire /usr/bin/aafire
 ```
 Результат работы:
 
@@ -27,18 +27,18 @@ RUN apt-get update && apt-get install -y libaa-bin iputils-ping
 ```
 и создаем новый образ `affire-ping`
 ```
-docker build -t affire-ping .
+sudo docker build -t affire-ping .
 ```
 Далее запускаем контейнер на основе созданного образа. При создании контейнера передаём ему запуск приложения “aafire”.
 ```
-docker run -it aafire-ping /usr/bin/aafire
+sudo docker run -it aafire-ping /usr/bin/aafire
 ```
 На основе образа `aafire-ping` создаем контейнеры с именами `cont1` и `cont2`:
 ```
-docker run -it --name cont1 aafire-ping /usr/bin/aafire
+sudo docker run -it --name cont1 aafire-ping /usr/bin/aafire
 ```
 ```
-docker run -it --name cont2 aafire-ping /usr/bin/aafire
+sudo docker run -it --name cont2 aafire-ping /usr/bin/aafire
 ```
 С помощью команды `docker ps` убеждаемся, что оба контейнера запущены:
 <p align="center">
