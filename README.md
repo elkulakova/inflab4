@@ -50,6 +50,15 @@ sudo docker run -it --name cont2 aafire-ping /usr/bin/aafire
  <img width="600px" src="net create.png" alt="qr"/>
 </p>
 
+После этого подключила контейнеры к сети.
+```
+docker network connect myNetwork cont1
+docker network connect myNetwork cont2
+```
+Теперь при помощи команды `docker network inspect myNetwork` посмотрим настройки созданной сети.
+<p align="center">
+ <img width="600px" src="inspection.png" alt="qr"/>
+</p>
 
 ## Задание:  
 Запустить в контейнере приложение “aafire”. Обратите внимание, что оно бесконечное и контейнер не будет автоматически отключаться.  
