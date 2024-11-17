@@ -60,6 +60,22 @@ docker network connect myNetwork cont2
  <img width="600px" src="inspection.png" alt="qr"/>
 </p>
 
+Теперь в отдельных окнах с помощью следующих команд войдем в контейнеры и проверим связь между ними:
+```
+sudo docker exec -it cont1 /bin/bash
+ping cont2
+```
+```
+sudo docker exec -it cont2 /bin/bash
+ping cont1
+```
+
+И увидим результат работы:
+<p align="center">
+ <img width="600px" src="inspection.png" alt="qr"/>
+</p>
+
+
 ## Задание:  
 Запустить в контейнере приложение “aafire”. Обратите внимание, что оно бесконечное и контейнер не будет автоматически отключаться.  
 Приложить скриншот в процессе работы контейнера.  
