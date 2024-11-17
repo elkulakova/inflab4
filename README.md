@@ -40,7 +40,7 @@ sudo docker run -it --name cont1 aafire-ping /usr/bin/aafire
 ```
 sudo docker run -it --name cont2 aafire-ping /usr/bin/aafire
 ```
-С помощью команды `docker ps` убеждаемся, что оба контейнера запущены:
+С помощью команды `sudo docker ps` убеждаемся, что оба контейнера запущены:
 <p align="center">
  <img width="600px" src="conts in p.png" alt="qr"/>
 </p>
