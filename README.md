@@ -33,7 +33,7 @@ sudo docker build -t affire-ping .
 ```
 sudo docker run -it aafire-ping /usr/bin/aafire
 ```
-На основе образа `aafire-ping` создаем контейнеры с именами `cont1` и `cont2`:
+На основе образа `aafire-ping` создаем и запускаем контейнеры с именами `cont1` и `cont2`:
 ```
 sudo docker run -it --name cont1 aafire-ping /usr/bin/aafire
 ```
